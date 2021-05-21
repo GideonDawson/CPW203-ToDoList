@@ -1,0 +1,22 @@
+.todo{
+    width:30%;
+    box-sizing: border-box;
+    background-color: lightblue;
+    padding: .25em; 
+    border-radius:.7em; 
+    margin:1em; 
+}
+
+.todo h3{
+    margin: 0px;
+
+}
+
+.todo p{
+    margin:0px; 
+}
+
+.completed{
+    opacity:50%; 
+    background-color:lightgreen; 
+}
