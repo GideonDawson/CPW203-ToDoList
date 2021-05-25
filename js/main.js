@@ -1,14 +1,8 @@
-var ToDoItem = /** @class */ (function () {
+var ToDoItem = (function () {
     function ToDoItem() {
     }
     return ToDoItem;
 }());
-/*
-let item = new ToDoItem();
-item.title = "Testing";
-item.dueDate = new Date(2020, 6, 1);
-item.isCompleted = false;
-*/
 window.onload = function () {
     var addItem = document.getElementById("add");
     addItem.onclick = main;
@@ -38,6 +32,7 @@ function displayToDoItem(item) {
     var itemDate = document.createElement("p");
     itemDate.innerText = item.dueDate.toDateString();
     var itemDiv = document.createElement("div");
+    itemDiv.onclick = markAsComplete;
     itemDiv.classList.add("todo");
     if (item.isCompleted) {
         itemDiv.classList.add("completed");
@@ -51,5 +46,12 @@ function displayToDoItem(item) {
     else {
         var incompleteToDos = document.getElementById("incomplete-items");
         incompleteToDos.appendChild(itemDiv);
+    }
+    function markAsComplete() {
+        console.log(this);
+        var itemDiv = this;
+        itemDiv.classList.add("completed");
+        var completedItems = document.getElementById("complete-items");
+        completedItems.appendChild(itemDiv);
     }
 }

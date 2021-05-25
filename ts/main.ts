@@ -50,9 +50,7 @@ function displayToDoItem(item:ToDoItem):void{
     itemDate.innerText = item.dueDate.toDateString(); 
 
     let itemDiv = document.createElement("div");
-
     itemDiv.onclick = markAsComplete; 
-
     itemDiv.classList.add("todo");
     if(item.isCompleted){
         itemDiv.classList.add("completed");
@@ -73,7 +71,12 @@ function displayToDoItem(item:ToDoItem):void{
         console.log(this);
         let itemDiv = <HTMLElement> this; 
         itemDiv.classList.add("completed"); 
+        
+        let completedItems = document.getElementById("complete-items");
+        completedItems.appendChild(itemDiv); 
     }
+
+    
 
 }
 

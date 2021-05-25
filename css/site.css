@@ -19,4 +19,5 @@
 .completed{
     opacity:50%; 
     background-color:lightgreen; 
+    text-decoration: line-through;
 }
