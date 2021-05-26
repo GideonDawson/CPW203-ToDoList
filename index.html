@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<div id="header">
     <h1>To Do List</h1>
+
 
     <label for="title">Title</label>
     <input type="text" id="title">
     <span>*</span>
-    <br>
+    <br><br>
 
     <label for="due-date">Due Date</label>
     <input type="text" id="due-date">
@@ -27,8 +29,10 @@
     <br>
 
     <input type="button" value="Add to do item" id="add">
-    <div id="incomplete-items"></div>
-    <div id="complete-items"></div>
+</div>
+    <div id="incomplete-items" >To Do </div>
+
+    <div id="complete-items">Completed</div>
 
     <script src="https://unpkg.com/js-datepicker"></script>
     <script src="js/main.js"></script>
